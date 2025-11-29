@@ -1,0 +1,34 @@
+{% load static %}
+<!DCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Inicio</title>
+    {% endblock %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+<body>
+    {% block logo %}
+    <div class="logo">
+        <img src="{% static 'img/logo.png' %}" width=150, alt="Logo do Sistema">
+    </div>
+    {% endblock %}
+
+    <div class="container">
+        {% block menu %}
+            <h1 class="text-center">Bem Vindos ao Sistema!</h1>
+            <h2 class="text-center">Finanças Simples.</h2>
+        {% endblock %}
+    </div>
+    {% block texto %}
+    <div class="text-center fs-4 font-monospace mt-4">
+        <p1>Você está cansado de fazer seu orçamento manualmente?</p1>
+    </div>
+    {% endblock     %}
+    <footer class="text-center p-3 bg-primary fixed-bottom text-white">
+        Finanças Simples © 2025 - Meu site
+    </footer>
+</body>
+</html>
