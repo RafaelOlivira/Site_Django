@@ -4,30 +4,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% block title %}
-    <title>Inicio</title>
+    {% block title %} <!-- Bloco de Titulo -->
+    <title>Login</title>
     {% endblock %}
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
     {% block logo %}
-    <div class="logo">
+    <div class="logo"> <!-- Bloco da Logo -->
         <img src="{% static 'img/logo.png' %}" width=150, alt="Logo do Sistema">
     </div>
     {% endblock %}
 
-    <div class="container">
-        {% block menu %}
+    {% block menu %} <!-- Bloco de Menu -->
+        <div class="container">
             <h1 class="text-center">Bem Vindos ao Sistema!</h1>
             <h2 class="text-center">Finanças Simples.</h2>
-        {% endblock %}
-    </div>
+        </div>
+    {% endblock %}
+
     {% block texto %}
-    <div class="text-center fs-4 font-monospace mt-4">
+    <div class="text-center fs-4 font-monospace mt-4"> <!-- Bloco de Texto -->
         <p1>Você está cansado de fazer seu orçamento manualmente?</p1>
     </div>
-    {% endblock     %}
-    <footer class="text-center p-3 bg-primary fixed-bottom text-white">
+    {% endblock     %} 
+
+    {% block acesso %} <!-- Login ou Cadastro -->
+    <div class="container mt-4">
+
+        <div class="mx-auto" style="max-width: 350px;">
+
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Usuário</label>
+                <input type="text" id="usuario" name="usuario" class="form-control" placeholder="Digite seu usuário">
+            </div>
+
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input type="password" id="senha" name="senha" class="form-control" placeholder="Digite sua senha">
+            </div>
+            <a href="inicio" class="btn btn-primary w-100">Acessar Sistema</a>
+        </div>
+
+    </div>
+    {% endblock %}
+
+    <footer class="text-center p-3 bg-primary fixed-bottom text-white"> <!-- Rodapé -->
         Finanças Simples © 2025 - Meu site
     </footer>
 </body>

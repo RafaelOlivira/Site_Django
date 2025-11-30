@@ -1,8 +1,8 @@
 from django.views.generic import TemplateView
 
 # Create your views here.
-class SobreView(TemplateView):
-    template_name = "paginas/sobre.html"
+class InicioView(TemplateView):
+    template_name = "paginas/inicio.html"
 
-class PrincipalView(TemplateView):
+class LoginView(TemplateView):
     template_name = "paginas/modelo.html"
